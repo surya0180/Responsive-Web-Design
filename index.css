@@ -18,13 +18,22 @@ body{
 .container{
     width: 95%;
     margin: 0 auto;
+    max-width: 70em;
 }
 
 /* typography
 ################################ */
 
+h1{
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
 .title{
-    font-size: 2.5rem;  
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+    font-weight: 900;
+    margin-top: 1em;
 }
 
 .title span{
@@ -66,7 +75,7 @@ nav a{
     text-transform: uppercase;
     font-size: 0.8em;
     padding: 0.5em;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 nav a:hover, nav a:focus{
@@ -92,7 +101,7 @@ nav a:hover, nav a:focus{
     font-size: 1.15em;
     text-decoration: none;
     text-transform: uppercase;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     padding: 0.5em 1.75em;
 }
@@ -105,10 +114,9 @@ nav a:hover, nav a:focus{
 .button-accent:hover, .button-accent:focus{
     background: #00ff6c;
     color: #232323;
-
 }
 
-@media () {
+@media (min-width: 60rem) {
     .button{
         font-size: 1.5rem;
     }
@@ -129,5 +137,68 @@ nav a:hover, nav a:focus{
     .home-hero{
         height: 100vh;
         padding-top: 35vh;
+    }
+}
+
+/* .home-about
+################################ */
+
+.home-about-textbox{
+    background-color: #232323;
+    padding: 4em;
+    margin-left: -2.7%;
+    margin-right: -2.65%;
+    outline: 2px solid #00ff6c;
+    outline-offset: -2.5em;
+    color: white;
+    font-weight: 100;
+    position: relative;
+}
+
+.home-about-textbox h1{
+    color: #00ff6c;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.01em;
+    background-color: #232323;
+    padding: 0 .18em;
+}
+
+@media (min-width: 25rem) {
+    h1{
+        font-size: 2rem;
+    }
+    .home-about-textbox{
+        margin-left: -2.65%; 
+    }
+    .home-about-textbox h1{
+        top: -0.2em;
+        padding: 0 .325em;
+    }
+}
+
+@media (min-width: 60rem) {
+    h1{
+        font-size: 1.5rem;
+    }
+    .home-about{
+        background-image: url(./img/who-we-are.jpg);
+        background-repeat: no-repeat;
+        padding: 5em;
+    }
+    .home-about-textbox{
+        width: 40%;
+        text-align: left; 
+        top: -10em;
+        box-shadow: 0 0 3em 0 rgba(0, 0, 0, .3);
+    }
+    .home-about-textbox h1{
+        top: 0.1em;
+    }
+
+    .home-about-textbox p{
+        padding-left: 0.8em;
+        padding-right: 0.1em;
     }
 }
